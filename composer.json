@@ -2,7 +2,7 @@
     "name": "solislab/template-wordpress",
     "description": "Solis Lab WordPress Sandbox",
     "require-dev": {
-        "wp-cli/wp-cli": "^2.6"
+        "wp-cli/wp-cli-bundle": "*"
     },
     "authors": [
         {
@@ -10,5 +10,13 @@
             "email": "info@solislab.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "scripts" : {
+        "post-install-cmd" : [
+            "/bin/bash -c \"[[ -f /usr/local/bin/wp ]] || sudo ln -s /workspace/template-wordpress/vendor/wp-cli/wp-cli/bin/wp /usr/bin/wp\"",
+            "/bin/bash -c \"source /workspace/template-wordpress/vendor/wp-cli/wp-cli/utils/wp-completion.bash\"",
+            "/bin/bash -c \"[[ -f ~/.bash_profile ]] || touch ~/.bash_profile\"",
+            "/bin/bash -c \"source ~/.bash_profile\""
+        ]
+    }
 }
