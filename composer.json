@@ -1,0 +1,14 @@
+{
+    "name": "solislab/template-wordpress",
+    "description": "Solis Lab WordPress Sandbox",
+    "require-dev": {
+        "wp-cli/wp-cli": "^2.6"
+    },
+    "authors": [
+        {
+            "name": "Solis Lab",
+            "email": "info@solislab.com"
+        }
+    ],
+    "require": {}
+}

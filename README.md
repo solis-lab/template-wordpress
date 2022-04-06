@@ -6,7 +6,7 @@ This is a [Wordpress](wordpress) template configured for ephemeral development e
 
 Click the button below to start a new development environment:
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/gitpod-io/template-wordpress)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/solis-lab/template-wordpress)
 
 ## Get Started With Your Own Project
 
