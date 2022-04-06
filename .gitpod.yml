@@ -1,9 +1,21 @@
+image:
+  file: .gitpod.Dockerfile
+
+ports:
+  # WordPress server
+  - port: 8000
+    onOpen: open-preview
+  # MySQL server
+  - port: 3306
+    onOpen: ignore
+
 tasks:
-  - init: |
-      docker-compose pull
+  - init: >
+      mysql -u root -e "create database wordpress" &&
+      mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'wordpress';" &&
       composer install
-  - command: |
-      docker-compose up
+  - command: >
+      php -S 0.0.0.0:8000
 
 vscode:
   extensions:
